@@ -1,0 +1,8 @@
+<section class="devjack-modal-container">
+    <div class="devjack-backdrop" (click)="close($event)">
+        <div class="devjack-msg-box">
+            <p [ngClass]="{'devjack-error-text': isError, 'devjack-success-text': !isError}">{{message}}</p>
+        </div>
+    </div>
+</section>
+ 

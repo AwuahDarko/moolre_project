@@ -1,0 +1,55 @@
+.devjack-cardcontainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.devjack-icon{
+    width: 40px;
+    height: 40px;
+}
+
+.devjack-bold-text{
+    font-weight: bold;
+}
+
+.devjack-cardcontainer input[type=text],
+.devjack-cardcontainer select,
+.devjack-cardcontainer input[type=tel],
+.devjack-cardcontainer input[type=email],
+.devjack-cardcontainer input[type=number]
+ {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  .devjack-cardcontainer input[type=submit], .devjack-cardcontainer button  {
+    width: 100%;
+    background-color: #130448;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .devjack-cardcontainer input[type=submit]:hover {
+    background-color: #130448;
+  }
+  
+  .devjack-onrow{
+    display: flex;
+    gap: 1px;
+    width: 100%;
+  }
+
+   .devjack-red-text{
+    color: salmon;
+  }

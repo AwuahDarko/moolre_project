@@ -1,0 +1,18 @@
+<form (submit)="makePayment($event)" class="devjack-cardcontainer">
+    <img [src]="asset_path+ 'assets/card.png'" class="devjack-icon" alt="phone">
+    <p class="devjack-bold-text">Enter your mobile number, provider and amount to start payment</p>
+<p class="devjack-red-text" id="devjack-error"></p> 
+    <input type="email" name="email" id="devjack-email" placeholder="Enter email address" required>
+    <input type="text" name="card" id="devjack-card" placeholder="Enter card number" required>
+    <div class="devjack-onrow">
+        <input type="text" name="expire" (keyup)="onDateEntered($event)" id="devjack-expire" placeholder="MM/YY" maxlength="5" required>
+        <input type="text" name="cvc" id="devjack-cvc" placeholder="CVC" maxlength="3" required>
+    </div>
+    <input type="number" name="amount" id="devjack-amount" placeholder="Enter amount" disabled [value]="amount" required>
+    <!-- <input type="submit" value="Pay"> -->
+    <button type="submit">
+        <img *ngIf="loading" width="15px" [src]="asset_path+'assets/loading.gif'">
+        Pay
+    </button>
+
+</form> 

@@ -1,0 +1,77 @@
+.devjack-otpcontainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10000;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.devjack-backdrop{
+    background-color: #000000a1;
+    min-width: 100%;
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.devjack-msg-box{
+    background-color: #fff;
+    height: 20%;
+    width: 70%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    border-radius: 3px;
+}
+
+.devjack-error-text{
+    color: salmon;
+
+}
+
+.devjack-success-text{
+    color: #4CAF50;
+}
+
+
+
+.devjack-otpcontainer input[type=text],
+.devjack-otpcontainer input[type=tel],
+.devjack-otpcontainer input[type=number] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  .devjack-otpcontainer input[type=submit] {
+    width: 100%;
+    background-color: #130448;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .devjack-otpcontainer input[type=submit]:hover {
+    background-color: #130448;
+  }
+  
+  form{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+  }
+
+  .devjack-info{
+    text-align: center;
+  }

@@ -1,0 +1,62 @@
+.devjack-main-container{
+    display: flex;
+    height: 100%;
+    position: relative;
+}
+
+.devjack-sidemenu{
+    width: 30%;
+    background-color: #eaeaea;
+    padding-left: 10px;
+}
+
+.devjack-formcontent{
+    width: 70%;
+}
+
+ul{
+    padding: 0;
+    margin: 0;
+}
+
+li{
+    list-style-type: none;
+}
+
+.devjack-sidemenu ul li{
+    padding: 15px;
+    border-bottom: 1px solid lightgray;
+    cursor: pointer;
+}
+
+.devjack-sidemenu p{
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 0;
+    padding: 0%;
+}
+
+.devjack-p{
+    border-bottom: 1px solid lightgray;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.devjack-head{
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid lightgray;
+    height: 60px;
+}
+
+.devjack-icon{
+    width: 15px;
+    height: 15px;
+    margin-top: 5px;
+}
+
+.devjack-text-success{
+    color: #130448;
+    font-weight: bold;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing checkout plugin</title>
+    <link rel="stylesheet" href="./moolre-checkout/styles.css">
+    <style>
+        .boxy {
+            width: 70%;
+            margin: auto;
+        }
+
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
+            background-color: #fff;
+            border-radius: 5px;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        @media(max-width: 768px) {
+            .boxy {
+                width: 100%;
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="boxy card">
+        <moolre-checkout asset_path="./moolre-checkout/"
+            api_key="pk_86504ef6fe2432d83f2d5a64714511113f088b6bae882b1e933fcbf5faafa20e" amount="1000"
+            unique_id="HGUN76456HG">
+        </moolre-checkout>
+    </div>
+
+
+    <script src="./moolre-checkout/checkout.js"></script>
+</body>
+
+</html>

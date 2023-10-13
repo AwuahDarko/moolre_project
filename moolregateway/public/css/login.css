@@ -1,0 +1,32 @@
+.login-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 125px;
+}
+
+.form-card{
+    width: 70%;
+}
+
+
+.img-area{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+@media (min-width: 800px) {
+    .form-card{
+        width: 40%;
+    }
+}
+
+@media (max-width: 500px) {
+    .in-row{
+        flex-direction: column;
+        align-items: center;
+    }
+}

@@ -1,0 +1,33 @@
+<section class="devjack-main-container">
+  <div class="devjack-sidemenu">
+    <div class="devjack-p">
+      <p>Pay with</p>
+    </div>
+    <ul>
+      <li (click)="isMomo = true" [ngClass]="{'devjack-text-success': isMomo }">
+        <img [src]="asset_path + 'assets/phone.png'" class="devjack-icon" alt="phone">
+        Mobile Money
+      </li>
+      <li (click)="gotoCard()" [ngClass]="{'devjack-text-success': !isMomo }">
+        <img [src]="asset_path + 'assets/card.png'" class="devjack-icon" alt="card">
+        Card
+      </li>
+    </ul>
+  </div>
+  <div class="devjack-formcontent">
+    <div class="devjack-head">
+      <img [src]="asset_path+'assets/Mobile.svg'" height="80%" alt="LOGO">
+    </div>
+    <div class="devjack-maincontent">
+      <app-momo-ui [asset_path]="asset_path" (openOtp)="onOpenOtpModal($event)" [amount]="amount" [api_key]="api_key" [unique_id]="unique_id"
+        *ngIf="isMomo"></app-momo-ui>
+      <app-card-ui [asset_path]="asset_path" (onPaymentDone)="cardPayment($event)" [mode]="mode" [amount]="amount" [api_key]="api_key" [unique_id]="unique_id" *ngIf="!isMomo"></app-card-ui>
+    </div>
+  </div>
+
+  <app-modal-ui *ngIf="showModal" [isError]="is_error_msg" [message]="modal_msg"
+    (onClose)="showModal=false"></app-modal-ui>
+  <app-otp-modal-ui  [code]="otp_code" *ngIf="showOptModal" [mode]="mode"
+    (onClose)="onOtpFinished($event)"></app-otp-modal-ui>
+  <app-loading-modal-ui [asset_path]="asset_path" *ngIf="loading"></app-loading-modal-ui>
+</section>

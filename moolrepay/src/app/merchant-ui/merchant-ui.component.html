@@ -1,0 +1,52 @@
+<section class="devjack-merchant-container">
+    <div class="devjack-header">
+        <div >
+            <img src="../../assets/Mobile.svg" height="50px" alt="logo">
+        </div>
+        <div class="devjack-onrow">
+            <img src="../../assets/avatar.png" alt="Avatar" class="devjack-avatar"> 
+            <p class="devjack-m0">Darko Awuah</p>
+        </div>
+    </div>
+
+    <div class="devjack-body devjack-card">
+        <h3>Here is all transactions received from you</h3>
+        <table class="devjack-table">
+           <thead>
+            <th>Date</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Amount</th>
+            <th>Transaction ID</th>
+            <th>Status</th>
+           </thead> 
+           <tbody>
+            <tr *ngFor="let trans of transactions">
+                <td> {{ trans.date }} </td>
+                <td> {{ trans.email }} </td>
+                <td> {{ trans.phone }} </td>
+                <td> {{ trans.amount }} </td>
+                <td> {{ trans.transactionId }} </td>
+                <td> {{ trans.status }} </td>
+            </tr> 
+            
+           </tbody>
+        </table>
+        <div class="devjack-page-box">
+            <div class="devjack-pagination">
+                <a  (click)="onPreviousPage()">&laquo;</a>
+            </div>
+            <div class="devjack-pagination" *ngFor="let i of container; let key=index">
+
+                <a [ngClass]="{'active': current_page == i}"  (click)="onPageChange( i )">{{ i }}</a>
+                <a disabled class="not-allowed" *ngIf="key === container.length - 3 ">...</a> 
+                <!-- <a  class="active">2</a> -->
+                <!-- <a disabled class="not-allowed">...</a> -->
+                <!-- <a (click)="onPageChange(6)">6</a> -->
+            </div>
+            <div class="devjack-pagination">
+                <a (click)="onNextPage()">&raquo;</a>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,18 @@
+<form (submit)="makePayment($event)" class="devjack-momocontainer">
+    <img [src]="asset_path+'assets/phone.png'" class="devjack-icon" alt="phone">
+    <p class="devjack-bold-text">Enter your mobile number, provider and amount to start payment</p>
+    <p class="devjack-red-text" id="devjack-error"></p>
+    <input type="tel" name="phone" id="devjack-phone" placeholder="Enter phone number" required>
+    <select name="provider" id="devjack-provider" required>
+        <option value="0">Choose provider</option>
+        <option value="MTN">MTN</option>
+        <option value="VODA">Vodafone</option>
+        <option value="TIGO">AirtelTigo</option>
+    </select>
+    <input type="number" name="amount" id="devjack-amount" placeholder="Emter amount" disabled [value]="amount" required>
+    <!-- <input type="submit" value="Pay"> -->
+    <button type="submit">
+        <img *ngIf="loading" width="15px" [src]="asset_path+'assets/loading.gif'">
+        Pay
+    </button>
+</form>

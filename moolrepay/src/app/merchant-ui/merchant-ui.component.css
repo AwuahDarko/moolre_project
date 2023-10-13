@@ -1,0 +1,104 @@
+.devjack-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.devjack-merchant-container {
+  padding: 20px;
+}
+
+.devjack-avatar {
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.devjack-onrow {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.devjack-m0 {
+  margin: 0;
+}
+
+.devjack-card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 3px 2px 5px 0px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+
+.devjack-body {
+  padding: 10px 10px;
+  margin-top: 20px;
+}
+
+h3 {
+  margin: 0 0 10px 0;
+}
+
+.devjack-table {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.devjack-table td,
+.devjack-table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.devjack-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.devjack-table tr:hover {
+  background-color: #ddd;
+}
+
+.devjack-table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #130448;
+  color: white;
+}
+
+.devjack-pagination {
+  display: inline-block;
+}
+
+.devjack-pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.devjack-pagination a.active {
+  background-color: #130448;
+  color: white;
+}
+
+.devjack-pagination a:hover:not(.active) {
+  background-color: #ddd;
+}
+
+.not-allowed {
+  background-color: #fff !important;
+}
+
+.not-allowed:hover {
+  background-color: #fff;
+}
+
+.devjack-page-box {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}

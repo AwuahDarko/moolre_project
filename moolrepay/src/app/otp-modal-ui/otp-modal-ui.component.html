@@ -1,0 +1,13 @@
+<section class="devjack-otpcontainer ">
+    <div class="devjack-backdrop">
+        <div class="devjack-msg-box">
+            <form (submit)="verifyOtp($event)">
+                <p class="devjack-info">Please enter the OTP code sent to your phone number</p>
+                <p style="margin: 0; color:salmon" hidden id="devjack-msg">Gen eg</p>
+                <input type="text" name="code" id="devjack-code" placeholder="Enter code">
+                <input type="submit" value="Verify">
+            </form>
+        </div>
+    </div>
+</section>
+ 
